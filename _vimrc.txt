@@ -12,7 +12,6 @@ set sw=1 " 스크롤바 너비
 set showmatch " 일치하는 괄호 하이라이팅
 set smartcase " 검색시 대소문자 구별
 
-colorscheme morning
 
 " Syntax Highlighting
 if has("syntax")
