@@ -1,11 +1,26 @@
-" Syntax Highlighting
-if has("syntax")
-	syntax on
-endif
-
+set hlsearch "검색어 하이라이팅
+set wildmenu
 set autoindent
 set cindent
 set nu
 set laststatus=2
 set showmatch
 set ruler
+set nobackup
+set sw=1 " 스크롤바 너비
+"set paste " 붙여넣기 계단현상 없애기
+set showmatch " 일치하는 괄호 하이라이팅
+set smartcase " 검색시 대소문자 구별
+
+colorscheme morning
+
+" Syntax Highlighting
+if has("syntax")
+	syntax on
+endif
+
+" 마지막으로 수정된 곳에 커서를 위치함
+au BufReadPost *
+\ if line("'\"") > 0 && line("'\"") <= line("$") |
+\ exe "norm g`\"" |
+\ endif
