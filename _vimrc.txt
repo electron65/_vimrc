@@ -1,0 +1,11 @@
+" Syntax Highlighting
+if has("syntax")
+	syntax on
+endif
+
+set autoindent
+set cindent
+set nu
+set laststatus=2
+set showmatch
+set ruler
